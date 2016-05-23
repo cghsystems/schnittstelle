@@ -1,0 +1,38 @@
+<div id="no-messe-history" class="container text-center page-header" ng-if="historyIsEmpty()">
+  There are no results to display. Please create some!
+</div>  
+
+<div id="messe-history" class="container page-header" ng-if="!historyIsEmpty()">
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <td>Value</td>
+        <td>Jasmin Value</td>
+        <td>Chris Value</td>
+        <td>Jasmin Contrib</td>
+        <td>Chris Contrib</td>
+        <td>Save</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="history in messeHistory()">
+        <td id="value-history">£ {{history.value}}</td>
+        <td id="jasmin-value-history">£ {{history.jasminValue}}</td>
+        <td id="chris-value-history">£ {{history.chrisValue}}</td>
+        <td id="jasmin-contrib-history">£ {{history.jasminContrib}}</td>
+        <td id="chris-contrib-history">£ {{history.chrisContrib}}</td>
+        <td id="save-history">
+          <div ng-if="!history.saved" class="animate-if">
+            <button class="button">Save</button>
+          </div>
+          <div ng-if="history.saved">
+            <button class="button">Delete</button>
+          </div>
+        </td>
+      </tr>
+      </div>
+    </tbody>
+  </table>
+</div>
+
+</div>
