@@ -1,0 +1,12 @@
+/Gruntfile.js
+/README.md
+/manifest
+/nginx.docker.conf
+/node_modules
+/package.json
+/pipeline
+/script*
+/src
+/tasks
+/test
+/tmp
