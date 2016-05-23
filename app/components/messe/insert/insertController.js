@@ -48,7 +48,6 @@ angular.module('schnittstelleApp')
       console.log('Cannot call with no value');
       return 
     }
-
     executeFairnesCall($scope.jasmin, 
                        $scope.chris, 
                        $scope.value);
