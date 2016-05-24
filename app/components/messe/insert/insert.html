@@ -1,38 +1,48 @@
 <div class="container" id="messe-view">
   <h3>Messe</h3>
-
   <div class="row">
-    <label for="value" class="col-md-2">Value</label>
-    <input id="value-input" 
-           class="col-md"  
-           type="text" 
-           ng-model-options='{ debounce: 700 }'
-           ng-model="value" 
-           ng-change="calculateFairness()"></input>
-  </div>
+    <div class="col-md-5">
+      <div class="row">
+        <label for="value" class="col-md-3">Value</label>
+        <input id="value-input" 
+               class="col-md"  
+               type="text" 
+               ng-model-options='{ debounce: 700 }'
+               ng-model="value" 
+               ng-change="calculateFairness()"></input>
+      </div>
+     
+      <div class="row">
+        <label for="chris" class="col-md-3">Chris</label>
+        <input id="chris-input" 
+               class="col-md" 
+               value="{{chris}}" 
+               type="text" 
+               ng-model-options='{ debounce: 700 }'
+               ng-model="chris" 
+               ng-change="calculateFairness()">
+         </input>
+      </div>
+     
+      <div class="row">
+        <label for="jasmin" class="col-md-3">Jasmin</label>
+        <input id="jasmin-input"
+               type="text" 
+               class="col-md" 
+               value="{{jasmin}}" 
+               ng-model-options='{ debounce: 700 }'
+               ng-model="jasmin" 
+               ng-change="calculateFairness()">
+         </input>
+      </div>
+    </div>
 
-  <div class="row">
-    <label for="chris" class="col-md-2">Chris</label>
-    <input id="chris-input" 
-           class="col-md" 
-           value="{{chris}}" 
-           type="text" 
-           ng-model-options='{ debounce: 700 }'
-           ng-model="chris" 
-           ng-change="calculateFairness()">
-     </input>
+    <div class="col-lg-3 col-sm-12 ng-scope">
+      <canvas id="pie" 
+              class="chart chart-pie" 
+              chart-data="data" 
+              chart-labels="labels"> 
+      </canvas> 
+    </div>
   </div>
-  
-  <div class="row">
-    <label for="jasmin" class="col-md-2">Jasmin</label>
-    <input id="jasmin-input"
-           type="text" 
-           class="col-md" 
-           value="{{jasmin}}" 
-           ng-model-options='{ debounce: 700 }'
-           ng-model="jasmin" 
-           ng-change="calculateFairness()">
-     </input>
-  </div>
-
 </div>

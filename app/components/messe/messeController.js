@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('schnittstelleApp')
+angular.module('MesseModule', ['HistoryModule', 'InsertModule'])
   .controller('MesseController', function ($scope, $http) {
 })
 .directive('messeView', function() {

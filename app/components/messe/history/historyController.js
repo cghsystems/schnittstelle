@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('schnittstelleApp')
+angular.module('HistoryModule', [])
   .controller('MesseHistoryController', function ($scope, $http) {
 
   $scope.messeCache = [];

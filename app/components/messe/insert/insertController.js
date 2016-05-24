@@ -2,8 +2,11 @@
 
 'use strict';
 
-angular.module('schnittstelleApp')
+angular.module('InsertModule', ['chart.js'])
   .controller('InsertController', function ($scope, $http) {
+
+  $scope.labels = ["Jasmin %", "Chris %"];
+  $scope.data = [50,50];
 
   var executeFairnesCall = function(jasminValue,chrisValue,value) {
     var url = 'http://messe.cfapps.pez.pivotal.io/jasmin/' 
@@ -48,6 +51,7 @@ angular.module('schnittstelleApp')
       console.log('Cannot call with no value');
       return 
     }
+
     executeFairnesCall($scope.jasmin, 
                        $scope.chris, 
                        $scope.value);
