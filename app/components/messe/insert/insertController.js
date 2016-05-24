@@ -30,7 +30,14 @@ angular.module('InsertModule', ['chart.js'])
         saved: false
       });
     });
-  }
+  };
+  
+  var updateFairnessPie = function(chris,jasmin) {
+    var total = parseInt(chris) + parseInt(jasmin);
+    var jasminSlice = Math.round((100/total)*jasmin);
+    var chrisSlice = Math.round((100/total)*chris);
+    $scope.data = [jasminSlice,chrisSlice];
+  };
 
   $scope.calculateFairness = function() {
     var jasmin = $scope.jasmin;
@@ -46,6 +53,8 @@ angular.module('InsertModule', ['chart.js'])
       console.log('Cannot call with no chris contrib');
       return 
     }
+
+    updateFairnessPie(jasmin,chris);
 
     if (value === undefined || value === '') {
       console.log('Cannot call with no value');
